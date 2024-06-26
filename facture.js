@@ -1,6 +1,14 @@
-export function displayBasket(basket, client) {
+export function displayBasket(basket, client, selectedSex) {
   //console.log(basket);
   const basketList = document.getElementById("anchor");
+
+  //// trie par nom
+  basket.sort((a, b) => {
+    if (a.article.name < b.article.name) return -1;
+    if (a.article.name > b.article.name) return 1;
+    return 0;
+  });
+
   var res = "";
   let total = 0;
   let totalFacture = 0;
@@ -9,7 +17,7 @@ export function displayBasket(basket, client) {
             <tr>
                 <th >produit </th>
                 <th class="detail"> prix unitaire</th>
-                <th class="detail"> quantité</th>
+                <th class="detail"> qté</th>
                   <th>action</th>
                 <th class="total">prix total</th>
               
@@ -26,20 +34,34 @@ export function displayBasket(basket, client) {
             <td>
               <button class="oneMore" value=${item.article.id}>+</button>
               <button class="oneLess" value=${item.article.id}>-</button>
-              <button class="trash"  value=${item.article.id}><i class="fa fa-trash" aria-hidden="true" style="pointer-events: none;"></i></button>
+              <button class="trash"  value=${
+                item.article.id
+              }><i class="fa fa-trash" aria-hidden="true" style="pointer-events: none;"></i></button>
             </td>
-            <td class="total"> ${total}</td>
+            <td class="total"> ${(+total).toLocaleString("fr-FR", {
+              style: "currency",
+              currency: "EUR",
+            })}</td>
         </tr>`;
   });
-  res += `<tr>
-                <td>${client} </td>
-                <td> </td>
-                <td></td>
-                <td>Total Facture</td>
-                <td>${totalFacture}</td>
-            </tr>   
+  res += `  
     </tbody>
     </table>`;
+
+  res += `
+     <table >
+      <tbody>
+        <tr>
+            <td colspan="3"> ${selectedSex} ${client} </td>
+         
+            <td>Total Facture</td>
+            <td>${totalFacture.toLocaleString("fr-FR", {
+              style: "currency",
+              currency: "EUR",
+            })}</td>
+        </tr>   
+      </tbody>
+    </table>`;
+
   basketList.innerHTML = res;
- 
 }

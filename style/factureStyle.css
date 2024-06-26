@@ -21,7 +21,7 @@ thead {
 
 th,
 td {
-    padding: 12px;
+    padding: 3px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
@@ -31,10 +31,7 @@ tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-tr:hover {
-    background-color: #f1f1f1;
-}
-
+ 
 /* Header cell styles */
 th {
     background-color: #4CAF50;
@@ -53,3 +50,27 @@ td {
     opacity: 0;
 }
 
+
+td:nth-child(1),th:nth-child(1) {
+   width: 250px;
+}
+
+td:nth-child(2),th:nth-child(2) {
+   width: 148px;
+}
+
+td:nth-child(3),th:nth-child(3) {
+   width: 80px;
+}
+
+td:nth-child(4),th:nth-child(4) {
+   width: 130px;
+}
+
+td:nth-child(5),th:nth-child(5) {
+   width: 125px;
+}
+
+tr:last-child td:nth-child(1){
+    width: 562px;
+}

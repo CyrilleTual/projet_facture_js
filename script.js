@@ -5,6 +5,7 @@ let store = [];
 var basket = [];
 let detailIsChecked = true;
 let totalIsChecked = true;
+let selectedSex = "Mr.";
 
 // initialisation du store (tableau d'objet) depuis un fichier Json
 async function createStore() {
@@ -46,7 +47,6 @@ function filterList() {
 
 /// ajout au pannier par id 
 
-
 function addToBaskletById (articleId, quantity){
   const article = store.find((item) => item.id == articleId);
 
@@ -57,7 +57,7 @@ function addToBaskletById (articleId, quantity){
   } else {
     basket.push({ article, quantity });
   }
-  displayBasket(basket, client);
+  displayBasket(basket, client, selectedSex);
   // reste a vider les champs et filtre 
   document.getElementById("quantity").value = "1";
   document.getElementById("filter").value = "";
@@ -69,27 +69,30 @@ function addToBasket() {
   const select = document.getElementById("article");
   const quantity = +document.getElementById("quantity").value;
   const articleId = select.value;
-  addToBaskletById(articleId,quantity)
+  addToBaskletById(articleId,quantity);
+  stayAwake();
 }
 
 // set du client
 function setClient() {
   client = this.value;
-  displayBasket(basket, client);
+  displayBasket(basket, client, selectedSex);
 }
 
 // mise à la poubelle
 function putInTrash(event) {
  // const idToRemove = (event.target.closest('button')).value;
   const idToRemove = event.target.value;
-  const newBasket = basket.filter( e => e.article.id != idToRemove)
-  displayBasket(newBasket, client);
+  basket = basket.filter( e => e.article.id != idToRemove)
+  displayBasket(basket, client, selectedSex);
+  stayAwake();
 }
 
 /// un de plus 
 function oneMorePlease(event){
   const idToAdd = event.target.value;
   addToBaskletById(idToAdd,1);
+  stayAwake();
 }
 
 function oneLessPlease(event){
@@ -99,14 +102,13 @@ function oneLessPlease(event){
   if (item.quantity>1){
     item.quantity = item.quantity-1
   }else return;
-  displayBasket(basket, client);
+  displayBasket(basket, client, selectedSex);
   stayAwake();
 }
 
 
 // au chargement de la page
 document.addEventListener("DOMContentLoaded", async () => {
-
   // ecoute de l'evenement click sur le bouton ajouter
   const btnAdd = document.getElementById("add");
   btnAdd.addEventListener("click", addToBasket);
@@ -124,77 +126,93 @@ document.addEventListener("DOMContentLoaded", async () => {
   deploy.addEventListener("click", () => {
     const select = document.getElementById("article");
     // toggle du deploy
-    select.size = select.size == 5 ? 1 : 5;
-
+    select.size = select.size == 15 ? 1 : 15;
   });
 
-  // visibilité des details et total par toggle de class 
+  // ecoute sur la selection du sexe
+  const radios = document.getElementsByName("sex");
+  Array.from(radios).forEach((item) => {
+    item.addEventListener("change", () => {
+      selectedSex = Array.from(radios).find((item) => item.checked).value;
+      displayBasket(basket, client, selectedSex);
+    });
+  });
+
+  // ecoute sur la case à cocher pour le detail
   const detail = document.getElementById("detail");
   detail.addEventListener("change", () => {
-    // const details = document.getElementsByClassName("detail");
-    // for (let i = 0; i < details.length; i++) {
-    //   details[i].classList.toggle("hide");
-    // }
-    totalIsChecked = !totalIsChecked;
+    detailIsChecked = !detailIsChecked;
+    stayAwake();
   });
 
-
-
-  // case à cocher pour la visibilité total
+  // excoute sur la case à cocher pour le total
   const total = document.getElementById("total");
   total.addEventListener("change", () => {
-    const totals = document.getElementsByClassName("total");
-    for (let i = 0; i < totals.length; i++) {
-      totals[i].classList.toggle("hide");
-    }
+    totalIsChecked = !totalIsChecked;
+    stayAwake();
   });
-
-  const totals = document.getElementsByClassName("total");
-  if (totalIsChecked) {
-    for (let i = 0; i < totals.length; i++) {
-      totals[i].classList.add("hide");
-    }
-  }else{
-    for (let i = 0; i < totals.length; i++) {
-      totals[i].classList.remove("hide");
-    }
-  }
-
-
-
-
-
-
-
-
-
 
   // creation du store
   const store = await createStore();
   // peuplement du select des articles
   populateSelect(store);
-  displayBasket(basket, client);
 
-  stayAwake()
+  
+
+  displayBasket(basket, client, selectedSex);
+  stayAwake();
 });
 
 //// surveillance des evenements sur la commande
 function stayAwake () {
+  // ecoute sur tous les enfants de la div article pour commande au double click
+  const articles = document.getElementById("article").children;
+  Array.from(articles).forEach((item) => {
+    item.addEventListener("dblclick", () => {
+      const articleId = item.value;
+      addToBaskletById(articleId, 1);
+    });
+  });
+
   /// ecoute evnt sur btn trash
   const trashs = document.getElementsByClassName("trash");
-  Array.from(trashs).forEach(elt =>{
-   elt.addEventListener("click", putInTrash);
+  Array.from(trashs).forEach((elt) => {
+    elt.addEventListener("click", putInTrash);
   });
 
   // ecoute sur oneMore
   const mores = document.getElementsByClassName("oneMore");
-  Array.from(mores).forEach(elt => {
+  Array.from(mores).forEach((elt) => {
     elt.addEventListener("click", oneMorePlease);
   });
 
   // ecoute sur oneLess
   const Lesss = document.getElementsByClassName("oneLess");
-  Array.from(Lesss).forEach(elt => {
+  Array.from(Lesss).forEach((elt) => {
     elt.addEventListener("click", oneLessPlease);
   });
+
+  /// visibilité total
+  const totals = document.getElementsByClassName("total");
+  if (!totalIsChecked) {
+    for (let i = 0; i < totals.length; i++) {
+      totals[i].classList.add("hide");
+    }
+  } else {
+    for (let i = 0; i < totals.length; i++) {
+      totals[i].classList.remove("hide");
+    }
+  }
+
+  /// visibilité detail
+  const details = document.getElementsByClassName("detail");
+  if (!detailIsChecked) {
+    for (let i = 0; i < details.length; i++) {
+      details[i].classList.add("hide");
+    }
+  } else {
+    for (let i = 0; i < details.length; i++) {
+      details[i].classList.remove("hide");
+    }
+  }
 }
