@@ -25,11 +25,14 @@ export function displayBasket(basket, client, selectedSex) {
         </thead > 
         <tbody>`;
   basket.forEach((item) => {
-    total += item.article.price * item.quantity;
+    total = item.article.price * item.quantity;
     totalFacture += total;
     res += `<tr>
             <td>${item.article.name} </td>
-            <td class="detail">${item.article.price}</td>
+            <td class="detail">${((item.article.price)).toLocaleString("fr-FR", {
+              style: "currency",
+              currency: "EUR",
+            })}</td>
             <td class="detail">${item.quantity}</td>
             <td>
               <button class="oneMore" value=${item.article.id}>+</button>

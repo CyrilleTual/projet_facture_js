@@ -1,5 +1,20 @@
+* { box-sizing: border-box; }
+
+
+
+
 .factureWrapper {
     min-height: 500px;
     display: block;
     background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+#article{
+    width: 100%;
+    margin: auto;
 }
