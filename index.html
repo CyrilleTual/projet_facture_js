@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="Description">
+    <link rel="stylesheet" href="style/style.css">
+    <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/factureStyle.css">
+</head>
+
+<body style="background-color: rgba(0, 0, 0, 0.014);">
+
+    <header class="text-center mt-4">
+        <H1>Bienvenue Chez toto , ici ya tout ski fô </H1>
+    </header>
+    <main class="container mt-4" style=" background-color: rgba(18, 16, 16, 0.089); height: 100vh;">
+
+        <div class="form-group">
+            <div class="d-flex justify-content-center align-items-center my-4">
+                <div class="form-check px-3">
+                    <input class="form-check-input" type="radio" name="sex" id="mr" value="Mr" checked>
+                    <label class="form-check-label" for="sex">Mr</label> <br>
+                    <input class="form-check-input" type="radio" name="sex" id="mme" value="Mme">
+                    <label class="form-check-label" for="sex">Mme</label>
+                </div>
+                <div class="d-flex ">
+                    <label for="client"></label>
+                    <input type="text" class="form-control d-block " name="client" id="client"
+                        placeholder="ici votre nom">
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-evenly">
+            <div class="m-1">
+                <h2>Commande</h2>
+                <div class="form-group m-auto">
+
+                    <label for="filter">Filter</label>
+                    <input type="text" name="filter" id="filter">
+
+                    <label for="article">article</label>
+                    <button id="deploy">déplier</button>
+                    <select class="form-control" name="article" id="article"></select>
+
+                    <label for="quantity">quantity</label>
+                    <input type="number" name="quantity" id="quantity" min="1" value="1">
+                    <button class="btn btn-primary"="submit" id="add">Validation</button>
+
+                </div>
+            </div>
+
+            <div class="m-1">
+                <div class="d-flex align-items-center justify-content-evenly">
+                    <h2>Facture</h2>
+                    <div class="form-group">
+                        <input type="checkbox" name="detail" id="detail" checked>
+                        <label for="detail">Détail</label>
+                        <input type="checkbox" name="total" id="total" checked>
+                        <label for="total">Total</label>
+                    </div>
+                </div>
+
+                <div id="anchor"></div>
+            </div>
+
+        </div>
+
+
+
+
+    </main>
+    <footer></footer>
+
+</body>
+
+</html>

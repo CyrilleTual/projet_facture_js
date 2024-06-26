@@ -1,0 +1,251 @@
+[
+  {
+    "id": 1,
+    "name": "Nuttela",
+    "price": 5.99
+  },
+  {
+    "id": 2,
+    "name": "Pepito",
+    "price": 3.49
+  },
+  {
+    "id": 3,
+    "name": "Kinder Bueno",
+    "price": 2.99
+  },
+  {
+    "id": 4,
+    "name": "Lu Petit Écolier",
+    "price": 1.99
+  },
+  {
+    "id": 5,
+    "name": "Belvita",
+    "price": 2.49
+  },
+  {
+    "id": 6,
+    "name": "Prince",
+    "price": 1.49
+  },
+  {
+    "id": 7,
+    "name": "BN",
+    "price": 1.99
+  },
+  {
+    "id": 8,
+    "name": "Michoko",
+    "price": 1.79
+  },
+  {
+    "id": 9,
+    "name": "Carambar",
+    "price": 0.99
+  },
+  {
+    "id": 10,
+    "name": "Malabar",
+    "price": 0.79
+  },
+  {
+    "id": 11,
+    "name": "Hollywood",
+    "price": 1.29
+  },
+  {
+    "id": 12,
+    "name": "Ricola",
+    "price": 1.99
+  },
+  {
+    "id": 13,
+    "name": "Haribo",
+    "price": 1.49
+  },
+  {
+    "id": 14,
+    "name": "Mentos",
+    "price": 0.99
+  },
+  {
+    "id": 15,
+    "name": "Lindt",
+    "price": 2.99
+  },
+  {
+    "id": 16,
+    "name": "Milka",
+    "price": 1.99
+  },
+  {
+    "id": 17,
+    "name": "Toblerone",
+    "price": 3.99
+  },
+  {
+    "id": 18,
+    "name": "Kraft",
+    "price": 2.49
+  },
+  {
+    "id": 19,
+    "name": "M&M's",
+    "price": 1.99
+  },
+  {
+    "id": 20,
+    "name": "Twix",
+    "price": 1.49
+  },
+  {
+    "id": 21,
+    "name": "Coca-Cola",
+    "price": 1.99
+  },
+  {
+    "id": 22,
+    "name": "Pepsi",
+    "price": 1.79
+  },
+  {
+    "id": 23,
+    "name": "Sprite",
+    "price": 1.49
+  },
+  {
+    "id": 24,
+    "name": "Fanta",
+    "price": 1.49
+  },
+  {
+    "id": 25,
+    "name": "Dr. Pepper",
+    "price": 2.29
+  },
+  {
+    "id": 26,
+    "name": "Mountain Dew",
+    "price": 1.99
+  },
+  {
+    "id": 27,
+    "name": "7UP",
+    "price": 1.49
+  },
+  {
+    "id": 28,
+    "name": "Lipton Ice Tea",
+    "price": 2.49
+  },
+  {
+    "id": 29,
+    "name": "Nestea",
+    "price": 1.99
+  },
+  {
+    "id": 30,
+    "name": "Red Bull",
+    "price": 3.99
+  },
+  {
+    "id": 31,
+    "name": "Monster Energy",
+    "price": 2.99
+  },
+  {
+    "id": 32,
+    "name": "Gatorade",
+    "price": 1.79
+  },
+  {
+    "id": 33,
+    "name": "Powerade",
+    "price": 1.49
+  },
+  {
+    "id": 34,
+    "name": "Vitaminwater",
+    "price": 2.49
+  },
+  {
+    "id": 35,
+    "name": "Aquafina",
+    "price": 0.99
+  },
+  {
+    "name": "Coca-Cola",
+    "price": 1.99
+  },
+  {
+    "id": 22,
+    "name": "Pepsi",
+    "price": 1.79
+  },
+  {
+    "id": 23,
+    "name": "Sprite",
+    "price": 1.49
+  },
+  {
+    "id": 24,
+    "name": "Fanta",
+    "price": 1.49
+  },
+  {
+    "id": 25,
+    "name": "Dr. Pepper",
+    "price": 2.29
+  },
+  {
+    "id": 26,
+    "name": "Mountain Dew",
+    "price": 1.99
+  },
+  {
+    "id": 27,
+    "name": "7UP",
+    "price": 1.49
+  },
+  {
+    "id": 28,
+    "name": "Lipton Ice Tea",
+    "price": 2.49
+  },
+  {
+    "id": 29,
+    "name": "Nestea",
+    "price": 1.99
+  },
+  {
+    "id": 30,
+    "name": "Red Bull",
+    "price": 3.99
+  },
+  {
+    "id": 31,
+    "name": "Monster Energy",
+    "price": 2.99
+  },
+  {
+    "id": 32,
+    "name": "Gatorade",
+    "price": 1.79
+  },
+  {
+    "id": 33,
+    "name": "Powerade",
+    "price": 1.49
+  },
+  {
+    "id": 34,
+    "name": "Vitaminwater",
+    "price": 2.49
+  },
+  {
+    "id": 35,
+    "name": "Aquafina",
+    "price": 0.99
+  }
+]
