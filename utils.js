@@ -1,7 +1,7 @@
 import { setListeners } from "./script.js";
 
 // utils.js file
-export function reset() {}
+ 
 
 // tri du panier par nom d'article
 export function sortBasket(basket) {

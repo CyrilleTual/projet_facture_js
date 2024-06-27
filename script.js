@@ -114,12 +114,8 @@ async function init() {
 
   console.log("init");
   client = "";
+  document.getElementById("client").value="";
   basket = [];
-  displayBasket(basket, client, selectedSex);
-  stayAwake();
-
-  // creation du store
-  
   displayBasket(basket, client, selectedSex);
   stayAwake();
 }
