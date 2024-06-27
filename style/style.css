@@ -32,3 +32,12 @@ h1 {
     width: 100%;
     margin: auto;
 }
+
+@media print {
+     .noPrint {
+         opacity: 0;
+     }
+     .hiddenPrint {
+         display: none;
+     }
+}

@@ -15,7 +15,7 @@ export function displayBasket(basket, client, selectedSex) {
                 <th >produit </th>
                 <th class="detail"> prix unitaire</th>
                 <th class="detail"> qté</th>
-                  <th>action</th>
+                <th class="noPrint">action</th>
                 <th class="total">prix total</th>
               
             </tr>
@@ -31,7 +31,7 @@ export function displayBasket(basket, client, selectedSex) {
               currency: "EUR",
             })}</td>
             <td class="detail">${item.quantity}</td>
-            <td>
+            <td class="noPrint">
               <button class="oneMore" value=${item.article.id}>+</button>
               <button class="oneLess" value=${item.article.id}>-</button>
               <button class="trash"  value=${

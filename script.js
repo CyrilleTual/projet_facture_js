@@ -110,10 +110,22 @@ function oneLessPlease(event){
   stayAwake();
 }
 
+async function init() {
 
-// au chargement de la page
-document.addEventListener("DOMContentLoaded", async () => {
-  // ecoute de l'evenement click sur le bouton ajouter
+  console.log("init");
+  client = "";
+  basket = [];
+  displayBasket(basket, client, selectedSex);
+  stayAwake();
+
+  // creation du store
+  
+  displayBasket(basket, client, selectedSex);
+  stayAwake();
+}
+
+export function setListeners (){
+// ecoute de l'evenement click sur le bouton ajouter
   const btnAdd = document.getElementById("add");
   btnAdd.addEventListener("click", addToBasket);
 
@@ -156,12 +168,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     stayAwake();
   });
 
-  // creation du store
-  const store = await createStore();
+  // inti 
+  document.getElementById("reset").addEventListener("click", () => init());
+ 
+}
+
+ 
+// au chargement de la page
+document.addEventListener("DOMContentLoaded", async () => {
+
+  setListeners();
   // peuplement du select des articles
+   const store = await createStore();
   populateSelect(store);
-  displayBasket(basket, client, selectedSex);
-  stayAwake();
+  init();
+
 });
 
 //// surveillance des evenements sur la commande

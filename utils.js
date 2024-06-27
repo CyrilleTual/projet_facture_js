@@ -1,18 +1,7 @@
-export function PrintElem(elem) {
-  var mywindow = window.open("", "PRINT", "height=400,width=600");
+import { setListeners } from "./script.js";
 
-  mywindow.document.write("<html><head><title>" + document.title + "</title>");
-  mywindow.document.write("</head><body >");
-  mywindow.document.write("<h1>" + document.title + "</h1>");
-  mywindow.document.write(document.getElementById(elem).innerHTML);
-  mywindow.document.write("</body></html>");
-  mywindow.document.close(); // necessary for IE >= 10
-  mywindow.focus(); // necessary for IE >= 10*/
-  mywindow.print();
-  mywindow.close();
-
-  return true;
-}
+// utils.js file
+export function reset() {}
 
 // tri du panier par nom d'article
 export function sortBasket(basket) {
@@ -31,3 +20,9 @@ export function sortStore(store) {
     return 0;
   });
 }
+
+window.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("print").addEventListener("click", function () {
+    window.print();
+  });
+});
