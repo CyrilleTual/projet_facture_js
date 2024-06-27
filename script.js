@@ -1,5 +1,6 @@
 import { Article } from "./Article.js";
 import { displayBasket } from "./facture.js";
+import { sortStore } from "./utils.js";
 let client = ""; // nom  du client
 let store = [];
 var basket = [];
@@ -23,12 +24,15 @@ async function createStore() {
 
 // peuplement du select depuis un tableau d'onjets de type Article
 function populateSelect(store) {
+  store = sortStore(store);
   const selectElt = document.getElementById("article");
   selectElt.innerHTML = "";
   store.forEach((article) => {
     const option = document.createElement("option");
     option.value = article.id;
-    option.textContent = article.name + " - " + article.price + "€";
+
+    option.innerHTML = `${(article.name).padEnd(18, " ")}  ${article.price}€`.replace(/ /g, "&nbsp;");
+
     selectElt.appendChild(option);
   });
   stayAwake();  //// surveillance des actions sur la commande
@@ -156,9 +160,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const store = await createStore();
   // peuplement du select des articles
   populateSelect(store);
-
-  
-
   displayBasket(basket, client, selectedSex);
   stayAwake();
 });

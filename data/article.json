@@ -1,251 +1,72 @@
 [
-  {
-    "id": 1,
-    "name": "Nuttela",
-    "price": 5.99
-  },
-  {
-    "id": 2,
-    "name": "Pepito",
-    "price": 3.49
-  },
-  {
-    "id": 3,
-    "name": "Kinder Bueno",
-    "price": 2.99
-  },
-  {
-    "id": 4,
-    "name": "Lu Petit Écolier",
-    "price": 1.99
-  },
-  {
-    "id": 5,
-    "name": "Belvita",
-    "price": 2.49
-  },
-  {
-    "id": 6,
-    "name": "Prince",
-    "price": 1.49
-  },
-  {
-    "id": 7,
-    "name": "BN",
-    "price": 1.99
-  },
-  {
-    "id": 8,
-    "name": "Michoko",
-    "price": 1.79
-  },
-  {
-    "id": 9,
-    "name": "Carambar",
-    "price": 0.99
-  },
-  {
-    "id": 10,
-    "name": "Malabar",
-    "price": 0.79
-  },
-  {
-    "id": 11,
-    "name": "Hollywood",
-    "price": 1.29
-  },
-  {
-    "id": 12,
-    "name": "Ricola",
-    "price": 1.99
-  },
-  {
-    "id": 13,
-    "name": "Haribo",
-    "price": 1.49
-  },
-  {
-    "id": 14,
-    "name": "Mentos",
-    "price": 0.99
-  },
-  {
-    "id": 15,
-    "name": "Lindt",
-    "price": 2.99
-  },
-  {
-    "id": 16,
-    "name": "Milka",
-    "price": 1.99
-  },
-  {
-    "id": 17,
-    "name": "Toblerone",
-    "price": 3.99
-  },
-  {
-    "id": 18,
-    "name": "Kraft",
-    "price": 2.49
-  },
-  {
-    "id": 19,
-    "name": "M&M's",
-    "price": 1.99
-  },
-  {
-    "id": 20,
-    "name": "Twix",
-    "price": 1.49
-  },
-  {
-    "id": 21,
-    "name": "Coca-Cola",
-    "price": 1.99
-  },
-  {
-    "id": 22,
-    "name": "Pepsi",
-    "price": 1.79
-  },
-  {
-    "id": 23,
-    "name": "Sprite",
-    "price": 1.49
-  },
-  {
-    "id": 24,
-    "name": "Fanta",
-    "price": 1.49
-  },
-  {
-    "id": 25,
-    "name": "Dr. Pepper",
-    "price": 2.29
-  },
-  {
-    "id": 26,
-    "name": "Mountain Dew",
-    "price": 1.99
-  },
-  {
-    "id": 27,
-    "name": "7UP",
-    "price": 1.49
-  },
-  {
-    "id": 28,
-    "name": "Lipton Ice Tea",
-    "price": 2.49
-  },
-  {
-    "id": 29,
-    "name": "Nestea",
-    "price": 1.99
-  },
-  {
-    "id": 30,
-    "name": "Red Bull",
-    "price": 3.99
-  },
-  {
-    "id": 31,
-    "name": "Monster Energy",
-    "price": 2.99
-  },
-  {
-    "id": 32,
-    "name": "Gatorade",
-    "price": 1.79
-  },
-  {
-    "id": 33,
-    "name": "Powerade",
-    "price": 1.49
-  },
-  {
-    "id": 34,
-    "name": "Vitaminwater",
-    "price": 2.49
-  },
-  {
-    "id": 35,
-    "name": "Aquafina",
-    "price": 0.99
-  },
-  {
-    "name": "Coca-Cola",
-    "price": 1.99
-  },
-  {
-    "id": 22,
-    "name": "Pepsi large",
-    "price": 3.79
-  },
-  {
-    "id": 23,
-    "name": "Sprite",
-    "price": 1.49
-  },
-  {
-    "id": 24,
-    "name": "Fanta",
-    "price": 1.49
-  },
-  {
-    "id": 25,
-    "name": "Dr. Pepper",
-    "price": 2.29
-  },
-  {
-    "id": 26,
-    "name": "Mountain Dew",
-    "price": 1.99
-  },
-  {
-    "id": 27,
-    "name": "7UP",
-    "price": 1.49
-  },
-  {
-    "id": 28,
-    "name": "Lipton Ice Tea",
-    "price": 2.49
-  },
-  {
-    "id": 29,
-    "name": "Nestea",
-    "price": 1.99
-  },
-  {
-    "id": 30,
-    "name": "Red Bull",
-    "price": 3.99
-  },
-  {
-    "id": 31,
-    "name": "Monster Energy",
-    "price": 2.99
-  },
-  {
-    "id": 32,
-    "name": "Gatorade",
-    "price": 1.79
-  },
-  {
-    "id": 33,
-    "name": "Powerade",
-    "price": 1.49
-  },
-  {
-    "id": 34,
-    "name": "Vitaminwater",
-    "price": 2.49
-  },
-  {
-    "id": 35,
-    "name": "Aquafina",
-    "price": 0.99
-  }
+  { "id": 1, "name": "Nuttela", "price": 5.99 },
+  { "id": 2, "name": "Pepito", "price": 3.49 },
+  { "id": 3, "name": "Kinder Bueno", "price": 2.99 },
+  { "id": 4, "name": "Lu Petit Écolier", "price": 1.99 },
+  { "id": 5, "name": "Belvita", "price": 2.49 },
+  { "id": 6, "name": "Prince", "price": 1.49 },
+  { "id": 7, "name": "BN", "price": 1.99 },
+  { "id": 8, "name": "Michoko", "price": 1.79 },
+  { "id": 9, "name": "Carambar", "price": 0.99 },
+  { "id": 10, "name": "Malabar", "price": 0.79 },
+  { "id": 11, "name": "Hollywood", "price": 1.29 },
+  { "id": 12, "name": "Ricola", "price": 1.99 },
+  { "id": 13, "name": "Haribo", "price": 1.49 },
+  { "id": 14, "name": "Mentos", "price": 0.99 },
+  { "id": 15, "name": "Lindt", "price": 2.99 },
+  { "id": 16, "name": "Milka", "price": 1.99 },
+  { "id": 17, "name": "Toblerone", "price": 3.99 },
+  { "id": 18, "name": "Kraft", "price": 2.49 },
+  { "id": 19, "name": "M&M's", "price": 1.99 },
+  { "id": 20, "name": "Twix", "price": 1.49 },
+  { "id": 21, "name": "Coca-Cola", "price": 1.99 },
+  { "id": 22, "name": "Pepsi", "price": 1.79 },
+  { "id": 23, "name": "Sprite", "price": 1.49 },
+  { "id": 24, "name": "Fanta", "price": 1.49 },
+  { "id": 25, "name": "Dr. Pepper", "price": 2.29 },
+  { "id": 26, "name": "Mountain Dew", "price": 1.99 },
+  { "id": 27, "name": "7UP", "price": 1.49 },
+  { "id": 28, "name": "Lipton Ice Tea", "price": 2.49 },
+  { "id": 29, "name": "Nestea", "price": 1.99 },
+  { "id": 30, "name": "Red Bull", "price": 3.99 },
+  { "id": 31, "name": "Monster Energy", "price": 2.99 },
+  { "id": 32, "name": "Gatorade", "price": 1.79 },
+  { "id": 33, "name": "Powerade", "price": 1.49 },
+  { "id": 34, "name": "Vitaminwater", "price": 2.49 },
+  { "id": 35, "name": "Aquafina", "price": 0.99 },
+  { "id": 36, "name": "Snickers", "price": 1.49 },
+  { "id": 37, "name": "Mars", "price": 1.49 },
+  { "id": 38, "name": "Bounty", "price": 1.49 },
+  { "id": 39, "name": "Skittles", "price": 1.49 },
+  { "id": 40, "name": "Starburst", "price": 1.49 },
+  { "id": 41, "name": "Twizzlers", "price": 1.49 },
+  { "id": 42, "name": "Airheads", "price": 1.49 },
+  { "id": 43, "name": "Jolly Rancher", "price": 1.49 },
+  { "id": 44, "name": "Hershey's", "price": 1.49 },
+  { "id": 45, "name": "Reese's", "price": 1.49 },
+  { "id": 46, "name": "KitKat", "price": 1.49 },
+  { "id": 47, "name": "Butterfinger", "price": 1.49 },
+  { "id": 48, "name": "Almond Joy", "price": 1.49 },
+  { "id": 49, "name": "3 Musketeers", "price": 1.49 },
+  { "id": 50, "name": "PayDay", "price": 1.49 },
+  { "id": 51, "name": "Baby Ruth", "price": 1.49 },
+  { "id": 52, "name": "Mounds", "price": 1.49 },
+  { "id": 53, "name": "York", "price": 1.49 },
+  { "id": 54, "name": "Heath", "price": 1.49 },
+  { "id": 55, "name": "Milk Duds", "price": 1.49 },
+  { "id": 56, "name": "Whoppers", "price": 1.49 },
+  { "id": 57, "name": "Raisinets", "price": 1.49 },
+  { "id": 58, "name": "Junior Mints", "price": 1.49 },
+  { "id": 59, "name": "Trolli", "price": 1.49 },
+  { "id": 60, "name": "Sour Patch Kids", "price": 1.49 },
+  { "id": 61, "name": "Swedish Fish", "price": 1.49 },
+  { "id": 62, "name": "Sweet Tarts", "price": 1.49 },
+  { "id": 63, "name": "Nerds", "price": 1.49 },
+  { "id": 64, "name": "Fun Dip", "price": 1.49 },
+  { "id": 65, "name": "Gobstopper", "price": 1.49 },
+  { "id": 66, "name": "Pixy Stix", "price": 1.49 },
+  { "id": 67, "name": "Laffy Taffy", "price": 1.49 },
+  { "id": 68, "name": "Smarties", "price": 1.49 },
+  { "id": 69, "name": "Ring Pop", "price": 1.49 },
+  { "id": 70, "name": "Push Pop", "price": 1.49 }
 ]

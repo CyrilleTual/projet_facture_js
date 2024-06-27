@@ -1,13 +1,10 @@
+import { sortBasket } from "./utils.js"
+
 export function displayBasket(basket, client, selectedSex) {
   //console.log(basket);
   const basketList = document.getElementById("anchor");
 
-  //// trie par nom
-  basket.sort((a, b) => {
-    if (a.article.name < b.article.name) return -1;
-    if (a.article.name > b.article.name) return 1;
-    return 0;
-  });
+  basket = sortBasket(basket);
 
   var res = "";
   let total = 0;

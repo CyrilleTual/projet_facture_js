@@ -1,7 +1,10 @@
 * { box-sizing: border-box; }
-
-
-
+h1 {
+      font-family: 'Pacifico', cursive;
+    font-size: 24px; 
+    color: #333;
+    text-shadow: rgba(255, 204, 0, 0.691) 1px 0 10px;
+}
 
 .factureWrapper {
     min-height: 500px;
@@ -12,6 +15,17 @@
 
 .form-group {
     margin-bottom: 20px;
+  
+}
+.catalog{
+      width: 285px;
+}
+.form-control {
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 #article{
